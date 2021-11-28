@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyProduct">
+   <children>
+      <Pane layoutX="17.0" layoutY="23.0" prefHeight="504.0" prefWidth="766.0" style="-fx-border-radius: 5; -fx-border-color: black;">
+         <children>
+            <Label layoutX="37.0" layoutY="34.0" text="Modify Product">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Pane layoutX="52.0" layoutY="100.0" prefHeight="184.0" prefWidth="283.0">
+               <children>
+                  <Label layoutX="13.0" layoutY="14.0" text="ID">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="49.0" text="Name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="84.0" text="Inv">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="119.0" text="Price">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="154.0" text="Max">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField id="modifyProductIdInput" fx:id="modProductIDInput" editable="false" layoutX="78.0" layoutY="10.0" promptText="AutoGen - Disabled" style="-fx-background-color: dcdada;" />
+                  <TextField id="modifyProductNameInput" fx:id="modProductNameInput" layoutX="78.0" layoutY="45.0" />
+                  <TextField id="modifyProductInvInput" fx:id="modProductInventoryInput" layoutX="78.0" layoutY="80.0" />
+                  <TextField id="modifyProductPriceInput" fx:id="modProductPriceInput" layoutX="78.0" layoutY="115.0" />
+                  <TextField id="modifyProductMaxInput" fx:id="modProductMaxInput" layoutX="78.0" layoutY="150.0" prefHeight="25.0" prefWidth="79.0" />
+                  <Label layoutX="166.0" layoutY="154.0" text="Min">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField id="modifyProductMinInput" fx:id="modProductMinInput" layoutX="198.0" layoutY="150.0" prefHeight="25.0" prefWidth="79.0" />
+               </children></Pane>
+            <TextField id="modifyProductSearchInput" fx:id="modProductSearchBar" layoutX="569.0" layoutY="22.0" onAction="#onModProductSearchBarAction" prefHeight="25.0" prefWidth="172.0" promptText="Search by Part ID or Name" />
+            <Pane layoutX="398.0" layoutY="65.0" prefHeight="431.0" prefWidth="343.0">
+               <children>
+                  <TableView id="modifyProductTable" fx:id="modProductAllPartsTable" layoutX="-2.0" prefHeight="148.0" prefWidth="343.0">
+                     <columns>
+                        <TableColumn fx:id="modProductAllPartsIDCol" prefWidth="60.0" text="Part ID" />
+                        <TableColumn fx:id="modProductAllPartsNameCol" prefWidth="70.0" text="Part Name" />
+                        <TableColumn fx:id="modProductAllPartsInventoryCol" prefWidth="97.0" text="Inventory Level" />
+                        <TableColumn fx:id="modProductAllPartsPriceCol" prefWidth="115.0" text="Price/Cost per Unit" />
+                     </columns>
+                  </TableView>
+                  <Button id="modifyProductAddButton" fx:id="modProductAddButton" layoutX="215.0" layoutY="160.0" mnemonicParsing="false" onAction="#onModProductAddButtonAction" text="Add" />
+                  <Button id="modifyProductRemoveAssociationButton" fx:id="modProductRemoveButton" layoutX="143.0" layoutY="362.0" mnemonicParsing="false" onAction="#onModProductRemoveButtonAction" text="Remove Associated Part" />
+                  <Button id="modifyProductSaveButton" fx:id="modProductSaveButton" layoutX="143.0" layoutY="392.0" mnemonicParsing="false" onAction="#onModProductSaveButtonAction" text="Save" />
+                  <Button id="modifyProductCancelButton" fx:id="modifyPartCancel" layoutX="234.0" layoutY="392.0" mnemonicParsing="false" onAction="#onModifyPartCancelAction" text="Cancel" />
+                  <TableView id="modifyProductTable" fx:id="modProductAssocPartsTable" layoutY="200.0" prefHeight="148.0" prefWidth="343.0">
+                     <columns>
+                        <TableColumn fx:id="modProductAssocPartsIDCol" prefWidth="60.0" text="Part ID" />
+                        <TableColumn fx:id="modProductAssocPartsNameCol" prefWidth="70.0" text="Part Name" />
+                        <TableColumn fx:id="modProductAssocPartsInventoryCol" prefWidth="97.0" text="Inventory Level" />
+                        <TableColumn fx:id="modProductAssocPartsPriceCol" prefWidth="115.0" text="Price/Cost per Unit" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children></Pane>
+   </children>
+</AnchorPane>

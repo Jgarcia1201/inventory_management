@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="610.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyPart">
+   <children>
+      <Label layoutX="76.0" layoutY="66.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <RadioButton id="modifyPartInHouseButton" fx:id="modPartInHouseButton" layoutX="216.0" layoutY="66.0" mnemonicParsing="false" onAction="#onModPartInHouseButtonAction" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="modPartToggle" />
+         </toggleGroup></RadioButton>
+      <RadioButton id="modifyPartOutsourcedButton" fx:id="modPartOutsourceButton" layoutX="333.0" layoutY="66.0" mnemonicParsing="false" onAction="#onModPartOutsourceButtonAction" text="Outsourced" toggleGroup="$modPartToggle" />
+      <Pane layoutX="76.0" layoutY="126.0" prefHeight="236.0" prefWidth="102.0">
+         <children>
+            <Label layoutX="6.0" layoutY="14.0" text="ID">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="6.0" layoutY="55.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="6.0" layoutY="89.0" text="Inv">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="6.0" layoutY="126.0" text="Price/Cost">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="6.0" layoutY="165.0" text="Max">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="modPartToggleText" layoutX="6.0" layoutY="205.0" text="Machine ID">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+         </children></Pane>
+      <TextField id="modifyPartIdInput" fx:id="modPartIdInput" editable="false" layoutX="198.0" layoutY="135.0" />
+      <TextField id="modifyPartNameInput" fx:id="modPartNameInput" layoutX="198.0" layoutY="174.0" />
+      <TextField id="modifyPartInvInput" fx:id="modPartInventoryInput" layoutX="198.0" layoutY="211.0" />
+      <TextField id="modifyPartPriceInput" fx:id="modPartPriceInput" layoutX="198.0" layoutY="247.0" />
+      <TextField id="modifyPartMaxInput" fx:id="modPartMaxInput" layoutX="198.0" layoutY="285.0" />
+      <TextField id="modifyPartMachineIdInput" fx:id="modPartToggleInput" layoutX="198.0" layoutY="325.0" />
+      <Label layoutX="375.0" layoutY="289.0" text="Min">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField id="modifyPartMinInput" fx:id="modPartMinInput" layoutX="416.0" layoutY="285.0" />
+      <Button id="modifyPartSaveButton" fx:id="modPartSaveButton" layoutX="361.0" layoutY="393.0" mnemonicParsing="false" onAction="#onModPartSaveButtonAction" text="Save" />
+      <Button id="modifyPartCancelButton" fx:id="modifyPartCancel" layoutX="424.0" layoutY="393.0" mnemonicParsing="false" onAction="#onModifyPartCancelAction" text="Cancel" />
+   </children>
+</AnchorPane>
